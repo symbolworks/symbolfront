@@ -14,13 +14,15 @@ This reduced user interface platform is not a replacement to traditional GUIs be
 
 ## Example Session
 
-We bring an example session in interacting with typical Sysh application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of valid commands, together with their syntax. That way, the client remains simple while the application takes care of specific functionality regarding the context.
+We bring an example session in interacting with typical Sysh application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context, together with their syntax. That way, the client remains simple while the application takes care of specific functionality regarding the context.
 
 When the example session starts, user interface (UI) shows:
 
 ```
 Applications. Choose a command:
 
+    e-mail
+    contacts
     tasks
     notes
     calc
@@ -105,6 +107,8 @@ We enter `done`. We're back to the applications menu:
 ```
 Applications. Choose a command:
 
+    e-mail
+    contacts
     tasks
     notes
     calc
