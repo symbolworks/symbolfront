@@ -27,7 +27,6 @@ Choose a command:
     tasks
     notes
     calc
-
     done
 
 >
@@ -139,7 +138,6 @@ Choose a command:
     tasks
     notes
     calc
-
     done
 
 >
