@@ -38,8 +38,6 @@ We write `tasks` and press [enter]. UI responds:
 ```
 Tasks.
 
-    From today onwards
-    
     Day, date, time                 Description
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
@@ -103,8 +101,6 @@ We enter `accept`. We're back to the tasks menu:
 ```
 Tasks.
 
-    From today onwards
-    
     Day, date, time                 Description
     -------------------------------------------------------------------------
  => Tue, 08/09/2026, 10:00          Go to dentist
