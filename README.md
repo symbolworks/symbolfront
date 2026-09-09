@@ -44,16 +44,12 @@ Tasks.
 
 Choose a command:
 
-    Cursor          Modify
-    ------------    ------------
-    today           new-task
+    Cursor          Modify          Exit
+    ------------    ------------    ------------
+    today           new-task        done
     prev            edit-task
     next            delete-task
     goto            move-task
-
-    Exit
-    ------------
-    done
 
 tasks>
 ```
@@ -115,16 +111,12 @@ Tasks.
 
 Choose a command:
 
-    Cursor          Modify
-    ------------    ------------
-    today           new-task
+    Cursor          Modify          Exit
+    ------------    ------------    ------------
+    today           new-task        done
     prev            edit-task
     next            delete-task
     goto            move-task
-
-    Exit
-    ------------
-    done
 
 tasks>
 ```
