@@ -56,10 +56,14 @@ We enter `modify`. UI responds:
 ```
 Tasks. Modify.
 
+    Day, date, time                 Description
+    -------------------------------------------------------------------------
+    -------------------------------------------------------------------------
+
 Choose a command:
 
     new-task
-    reject
+    done
 
 >
 ```
