@@ -44,20 +44,29 @@ Tasks.
 
 Choose a command:
 
-    Cursor          Modify          Exit
-    ------------    ------------    ------------
-    today           new-task        done
-    prev
-    next
-    goto
+    cursor
+    modify
+    done
 
 >
 ```
 
+We enter `modify`. UI responds:
+
+```
+Tasks. Modify.
+
+Choose a command:
+
+    new-task
+    reject
+
+>
+```
 We enter `new-task`. UI responds:
 
 ```
-New task. Date and time.
+Tasks. Modify. New task. Date and time.
 
 Choose a command:
 
@@ -70,7 +79,7 @@ Choose a command:
 We enter `"08/09/2026, 10:00"`. UI responds:
 
 ```
-New task. Description.
+Tasks. Modify. New task. Description.
 
 Choose a command:
 
@@ -83,7 +92,7 @@ Choose a command:
 We enter `"Go to dentist"`. UI responds:
 
 ```
-New task. Entered data review.
+Tasks. Modify. New task. Entered data review.
 
     Date and time: "08/09/2026, 10:00"
     Description:   "Go to dentist"
@@ -108,12 +117,9 @@ Tasks.
 
 Choose a command:
 
-    Cursor          Modify          Exit
-    ------------    ------------    ------------
-    today           new-task        done
-    prev            edit-task
-    next            delete-task
-    goto            move-task
+    cursor
+    modify
+    done
 
 >
 ```
