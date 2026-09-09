@@ -4,25 +4,26 @@
 
 ## Motivation
 
-In this attempt, we are exploring an experiment where interaction with a certain class of applications may be potentially simplified in relation to common GUIs built on top of those applications.
+In this attempt, we are exploring an experiment where interaction with a certain class of applications may be potentially simplified in relation to common graphic user interfaces (GUI) built on top of those applications.
 
 Considering the current context within an application, symbolic instructions may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the instructions gain a lot of positive features like simplicity, portability, scriptability, and reproducibility.
 
 Because symbolic input/output could potentially carry only necessary communication information, when working with an application, there may be less distractions in a form of notifications, sounds, images, videos, etc. Hopefully, only information related to work of interest remains.
 
-This reduced user interface platform is not a replacement to traditional GUIs because there are still a lot of applications that work better with graphic environments. But we may also acknowledge that there exists a considerable range of applications whose simplification would benefit from a short and concise set of simple instructions at given moment, exchanged between user and application.
+This reduced user interface (UI) platform is not a replacement to traditional GUIs because there are still a lot of applications that work better with graphic environments. But we may also acknowledge that there exists a considerable range of applications whose simplification would benefit from a short and concise set of simple instructions at given moment, exchanged between user and application.
 
 ## Example Session
 
 We bring an example session in interacting with typical Sysh application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context, together with their syntax. That way, the client remains simple while the application takes care of specific functionality regarding the context.
 
-When the example session starts, user interface (UI) shows:
+When the example session starts, user interface shows:
 
 ```
-Applications. Choose a command:
+Applications.
+
+Choose a command:
 
     e-mail
-    contacts
     tasks
     notes
     calc
@@ -35,14 +36,23 @@ Applications. Choose a command:
 We write `tasks` and press [enter]. UI responds:
 
 ```
-Tasks. Choose a command:
+Tasks.
 
-    task-list
-    new-task
-    edit-task
-    delete-task
-    move-task
+    Date and time         Description
+    -----------------------------------------------------
+    -----------------------------------------------100%--
 
+Choose a command:
+
+    Move            Modify
+    ------------    ------------
+    today           new-task
+    prev            edit-task
+    next            delete-task
+    goto            move-task
+
+    Exit
+    ------------
     done
 
 tasks>
@@ -51,10 +61,13 @@ tasks>
 We enter `new-task`. UI responds:
 
 ```
-New task. Date and time:
+New task.
+    Date and time.
 
-   <date-time>
-   reject
+Choose a command:
+
+    <date-time>
+    reject
 
 tasks/new-task>
 ```
@@ -62,7 +75,10 @@ tasks/new-task>
 We enter `"08/09/2026, 10:00"`. UI responds:
 
 ```
-New task. Description:
+New task.
+    Description.
+
+Choose a command:
 
     <string>
     reject
@@ -73,7 +89,8 @@ tasks/new-task>
 We enter `"Go to dentist"`. UI responds:
 
 ```
-New task. Entered data review.
+New task.
+    Entered data review.
 
     Date and time: "08/09/2026, 10:00"
     Description:   "Go to dentist"
@@ -89,14 +106,24 @@ tasks/new-task>
 We enter `accept`. We're back to the tasks menu:
 
 ```
-Tasks. Choose a command:
+Tasks.
 
-    task-list
-    new-task
-    edit-task
-    delete-task
-    move-task
+    Date and time           Description
+    -----------------------------------------------------
+  * 08/09/2026, 10:00       Go to dentist
+    -----------------------------------------------100%--
 
+Choose a command:
+
+    Move            Modify
+    ------------    ------------
+    today           new-task
+    prev            edit-task
+    next            delete-task
+    goto            move-task
+
+    Exit
+    ------------
     done
 
 tasks>
@@ -108,7 +135,6 @@ We enter `done`. We're back to the applications menu:
 Applications. Choose a command:
 
     e-mail
-    contacts
     tasks
     notes
     calc
