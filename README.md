@@ -51,42 +51,39 @@ Choose a command:
     next
     goto
 
-tasks>
+>
 ```
 
 We enter `new-task`. UI responds:
 
 ```
-New task.
-    Date and time.
+New task. Date and time.
 
 Choose a command:
 
     <date-time>
     reject
 
-tasks/new-task>
+>
 ```
 
 We enter `"08/09/2026, 10:00"`. UI responds:
 
 ```
-New task.
-    Description.
+New task. Description.
 
 Choose a command:
 
     <string>
     reject
 
-tasks/new-task>
+>
 ```
 
 We enter `"Go to dentist"`. UI responds:
 
 ```
-New task.
-    Entered data review.
+New task. Entered data review.
 
     Date and time: "08/09/2026, 10:00"
     Description:   "Go to dentist"
@@ -96,7 +93,7 @@ Choose a command:
     accept
     reject
 
-tasks/new-task>
+>
 ```
 
 We enter `accept`. We're back to the tasks menu:
@@ -118,13 +115,15 @@ Choose a command:
     next            delete-task
     goto            move-task
 
-tasks>
+>
 ```
 
 We enter `done`. We're back to the applications menu:
 
 ```
-Applications. Choose a command:
+Applications.
+
+Choose a command:
 
     e-mail
     tasks
