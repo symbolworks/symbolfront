@@ -38,7 +38,7 @@ We write `tasks` and press [enter]. UI responds:
 ```
 Tasks.
 
-    Date and time         Description
+    Day, date, time                 Description
     ------------------------------------------------------------
     ------------------------------------------------------------
 
@@ -104,15 +104,15 @@ We enter `accept`. We're back to the tasks menu:
 ```
 Tasks.
 
-    Date and time           Description
+    Day, date, time                 Description
     ------------------------------------------------------------
- => 08/09/2026, 10:00       Go to dentist
+ => Tue, 08/09/2026, 10:00          Go to dentist
     ------------------------------------------------------------
 
 Choose a command:
 
     Cursor          Modify          Exit
-    ------------    ------------    ------------    ------------
+    ------------    ------------    ------------
     today           new-task        done
     prev            edit-task
     next            delete-task
