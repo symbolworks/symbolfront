@@ -47,9 +47,9 @@ Choose a command:
     Cursor          Modify          Exit
     ------------    ------------    ------------
     today           new-task        done
-    prev            edit-task
-    next            delete-task
-    goto            move-task
+    prev
+    next
+    goto
 
 tasks>
 ```
