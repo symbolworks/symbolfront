@@ -44,7 +44,7 @@ Tasks.
 
 Choose a command:
 
-    Move            Modify
+    Cursor          Modify
     ------------    ------------
     today           new-task
     prev            edit-task
@@ -115,7 +115,7 @@ Tasks.
 
 Choose a command:
 
-    Move            Modify
+    Cursor          Modify
     ------------    ------------
     today           new-task
     prev            edit-task
