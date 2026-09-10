@@ -66,10 +66,30 @@ Choose a command:
 
 >
 ```
+
 We enter `new-task`. UI responds:
 
 ```
+Tasks. Modify. New task.
+
+    Date and time: ?
+    Description:   ?
+
+Choose a command:
+
+    enter
+    reject
+
+>
+```
+
+We enter `enter`. UI responds:
+
+```
 Tasks. Modify. New task. Date and time.
+
+    Date and time: ?
+    Description:   ?
 
 Choose a command:
 
@@ -83,6 +103,9 @@ We enter `"2026-09-08, 10:00"`. UI responds:
 
 ```
 Tasks. Modify. New task. Description.
+
+    Date and time: "2026-09-08, 10:00"
+    Description:   ?
 
 Choose a command:
 
@@ -102,6 +125,7 @@ Tasks. Modify. New task. Entered data review.
 
 Choose a command:
 
+    reenter
     accept
     reject
 
