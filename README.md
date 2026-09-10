@@ -1,6 +1,6 @@
-# Sysh
+# Symbolfront
 
-**A symbolic shell promoting simplicity in communication between users and applications**
+**A symbolic frontend promoting simplicity in communication between users and applications**
 
 ## Motivation
 
@@ -14,7 +14,7 @@ This reduced user interface (UI) platform is not a replacement to traditional GU
 
 ## Example Session
 
-We bring an example session in interacting with typical Sysh application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context, together with their syntax. That way, the client remains simple while the application takes care of specific functionality regarding the context.
+We bring an example session in interacting with typical Symbolfront application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context, together with their syntax. That way, the client remains simple while the application takes care of specific functionality regarding the context.
 
 When the example session starts, user interface shows:
 
@@ -172,4 +172,4 @@ The example command set is chosen for effective functioning of the example appli
 
 ## Summary
 
-Sysh deliberately trades GUI expressiveness for simplicity of use. The purpose of this project is to explore how far that trade-off can be taken. GUIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting class of applications.
+Symbolfront deliberately trades GUI expressiveness for simplicity of use. The purpose of this project is to explore how far that trade-off can be taken. GUIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting class of applications.
