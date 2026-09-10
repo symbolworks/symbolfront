@@ -118,7 +118,7 @@ Choose a command:
 We enter `"Go to dentist"`. UI responds:
 
 ```
-Tasks. Modify. New task. Entered data review.
+Tasks. Modify. New task.
 
     Date and time: "2026-09-08, 10:00"
     Description:   "Go to dentist"
