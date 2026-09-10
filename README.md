@@ -79,7 +79,7 @@ Choose a command:
 >
 ```
 
-We enter `"08/09/2026, 10:00"`. UI responds:
+We enter `"2026-09-08, 10:00"`. UI responds:
 
 ```
 Tasks. Modify. New task. Description.
@@ -115,7 +115,7 @@ Tasks.
 
     Day, date, time                 Description
     -------------------------------------------------------------------------
- => Tue, 08/09/2026, 10:00          Go to dentist
+ => Tue, 2026-09-08, 10:00          Go to dentist
     -------------------------------------------------------------------------
 
 Choose a command:
