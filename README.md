@@ -125,7 +125,7 @@ Tasks. Modify. New task.
 
 Choose a command:
 
-    reenter
+    enter-again
     accept
     reject
 
