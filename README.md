@@ -72,6 +72,8 @@ We enter `new-task`. UI responds:
 ```
 Tasks. Modify. New task.
 
+    Task
+
     Date and time: ?
     Description:   ?
 
@@ -87,6 +89,8 @@ We enter `enter`. UI responds:
 
 ```
 Tasks. Modify. New task. Date and time.
+
+    Task
 
     Date and time: ?
     Description:   ?
@@ -104,6 +108,8 @@ We enter `"2026-09-08, 10:00"`. UI responds:
 ```
 Tasks. Modify. New task. Description.
 
+    Task
+
     Date and time: "2026-09-08, 10:00"
     Description:   ?
 
@@ -119,6 +125,8 @@ We enter `"Go to dentist"`. UI responds:
 
 ```
 Tasks. Modify. New task.
+
+    Task
 
     Date and time: "2026-09-08, 10:00"
     Description:   "Go to dentist"
