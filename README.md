@@ -74,8 +74,8 @@ Tasks. Modify. New task.
 
     Task
 
-    Date and time: ?
-    Description:   ?
+    Date and time: <date-time>
+    Description:   <string>
 
 Choose a command:
 
@@ -92,8 +92,8 @@ Tasks. Modify. New task. Date and time.
 
     Task
 
-    Date and time: ?
-    Description:   ?
+    Date and time: <date-time>
+    Description:   <string>
 
 Choose a command:
 
@@ -111,7 +111,7 @@ Tasks. Modify. New task. Description.
     Task
 
     Date and time: "2026-09-08, 10:00"
-    Description:   ?
+    Description:   <string>
 
 Choose a command:
 
