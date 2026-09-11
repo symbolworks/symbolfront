@@ -36,6 +36,8 @@ We write `tasks` and press [enter]. UI responds:
 
 ```
 Tasks.
+    
+    Task List
 
     Day, date, time                 Description
     -------------------------------------------------------------------------
@@ -54,6 +56,8 @@ We enter `modify`. UI responds:
 
 ```
 Tasks. Modify.
+
+    Task List
 
     Day, date, time                 Description
     -------------------------------------------------------------------------
@@ -143,6 +147,8 @@ We enter `accept`. We're back to the tasks menu:
 
 ```
 Tasks.
+
+    Task List
 
     Day, date, time                 Description
     -------------------------------------------------------------------------
