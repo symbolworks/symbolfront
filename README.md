@@ -21,7 +21,7 @@ When the example session starts, user interface shows:
 ```
 Applications.
 
-Choose a command:
+Enter a command:
 
     e-mail
     tasks
@@ -43,7 +43,7 @@ Tasks.
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
 
-Choose a command:
+Enter a command:
 
     cursor
     modify
@@ -63,7 +63,7 @@ Tasks. Modify.
     -------------------------------------------------------------------------
     -------------------------------------------------------------------------
 
-Choose a command:
+Enter a command:
 
     new-task
     done
@@ -81,7 +81,7 @@ Tasks. Modify. New task.
     Date and time: <date-time>
     Description:   <string>
 
-Choose a command:
+Enter a command:
 
     enter
     reject
@@ -99,7 +99,7 @@ Tasks. Modify. New task. Date and time.
     Date and time: <date-time>
     Description:   <string>
 
-Choose a command:
+Enter a command:
 
     <date-time>
     reject
@@ -117,7 +117,7 @@ Tasks. Modify. New task. Description.
     Date and time: "2026-09-08, 10:00"
     Description:   <string>
 
-Choose a command:
+Enter a command:
 
     <string>
     reject
@@ -135,7 +135,7 @@ Tasks. Modify. New task.
     Date and time: "2026-09-08, 10:00"
     Description:   "Go to dentist"
 
-Choose a command:
+Enter a command:
 
     accept
     reject
@@ -155,7 +155,7 @@ Tasks.
  => Tue, 2026-09-08, 10:00          Go to dentist
     -------------------------------------------------------------------------
 
-Choose a command:
+Enter a command:
 
     cursor
     modify
@@ -169,7 +169,7 @@ We enter `done`. We're back to the applications menu:
 ```
 Applications.
 
-Choose a command:
+Enter a command:
 
     e-mail
     tasks
