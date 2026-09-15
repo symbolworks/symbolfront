@@ -8,8 +8,6 @@ In this attempt, we are exploring an experiment where interaction with a certain
 
 Considering the current context within an application, symbolic instructions may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the instructions gain a lot of positive features like simplicity, portability, scriptability, and reproducibility.
 
-Because symbolic input/output could potentially carry only necessary communication information, when working with an application, there may be less distractions in a form of notifications, sounds, images, videos, etc. Hopefully, only information related to work of interest remains.
-
 This reduced user interface (UI) platform is not a replacement to traditional GUIs because there are still a lot of applications that work better with graphic environments. But we may also acknowledge that there exists a considerable range of applications whose simplification would benefit from a short and concise set of simple instructions at given moment, exchanged between user and application.
 
 ## Example Session
