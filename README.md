@@ -46,25 +46,6 @@ Tasks.
 Enter a command:
 
     cursor
-    modify
-    done
-
->
-```
-
-We enter `modify`. UI responds:
-
-```
-Tasks. Modify.
-
-    Task List
-
-    Day, date, time                 Description
-    -------------------------------------------------------------------------
-    -------------------------------------------------------------------------
-
-Enter a command:
-
     new-task
     done
 
@@ -74,7 +55,7 @@ Enter a command:
 We enter `new-task`. UI responds:
 
 ```
-Tasks. Modify. New task.
+Tasks. New task.
 
     Task
 
@@ -92,7 +73,7 @@ Enter a command:
 We enter `enter`. UI responds:
 
 ```
-Tasks. Modify. New task. Date and time.
+Tasks. New task. Date and time.
 
     Task
 
@@ -110,7 +91,7 @@ Enter a command:
 We enter `"2026-09-08, 10:00"`. UI responds:
 
 ```
-Tasks. Modify. New task. Description.
+Tasks. New task. Description.
 
     Task
 
@@ -128,7 +109,7 @@ Enter a command:
 We enter `"Go to dentist"`. UI responds:
 
 ```
-Tasks. Modify. New task.
+Tasks. New task.
 
     Task
 
@@ -158,7 +139,9 @@ Tasks.
 Enter a command:
 
     cursor
-    modify
+    new-task
+    edit-task
+    delete-task
     done
 
 >
