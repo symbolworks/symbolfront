@@ -59,29 +59,14 @@ Tasks. New task.
 
     Task
 
-    Date and time: <date-time>
+ => Date and time: <date-time>
     Description:   <string>
+
+    OK?
 
 Enter a command:
 
-    enter
-    reject
-
->
-```
-
-We enter `enter`. UI responds:
-
-```
-Tasks. New task. Date and time.
-
-    Task
-
-    Date and time: <date-time>
-    Description:   <string>
-
-Enter a command:
-
+    cursor
     <date-time>
     reject
 
@@ -91,15 +76,18 @@ Enter a command:
 We enter `"2026-09-08, 10:00"`. UI responds:
 
 ```
-Tasks. New task. Description.
+Tasks. New task.
 
     Task
 
     Date and time: "2026-09-08, 10:00"
-    Description:   <string>
+ => Description:   <string>
+ 
+    OK?
 
 Enter a command:
 
+    cursor
     <string>
     reject
 
@@ -115,9 +103,12 @@ Tasks. New task.
 
     Date and time: "2026-09-08, 10:00"
     Description:   "Go to dentist"
+    
+ => OK?
 
 Enter a command:
 
+    cursor
     accept
     reject
 
