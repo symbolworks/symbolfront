@@ -37,15 +37,10 @@ We write `tasks` and press [enter]. UI responds:
 ```
 Tasks.
     
-    Task List
-
-    Day, date, time                 Description
-    -------------------------------------------------------------------------
-    -------------------------------------------------------------------------
+    Task list is empty.
 
 Enter a command:
 
-    cursor
     new-task
     done
 
