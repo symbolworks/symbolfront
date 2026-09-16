@@ -1,6 +1,6 @@
 # Symbolfront
 
-**A symbolic frontend promoting simplicity in communication between users and applications**
+**A symbolic frontend client promoting simplicity in communication between users and applications**
 
 ## Motivation
 
@@ -35,7 +35,9 @@ We write `tasks` and press [enter]. UI responds:
 ```
 Tasks.
     
-    Task list is empty.
+    Task List
+    
+    The list is empty.
 
 Enter a command:
 
