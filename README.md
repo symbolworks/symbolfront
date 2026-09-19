@@ -117,9 +117,9 @@ Tasks.
 
     Task List
 
-     Index  Day, date, time                 Description
+       Index  Day, date, time                 Description
     -------------------------------------------------------------------------
-    =>  1.  Tue, 2026-09-08, 10:00          Go to dentist
+    =>    1.  Tue, 2026-09-08, 10:00          Go to dentist
     -------------------------------------------------------------------------
 
 Commands.
