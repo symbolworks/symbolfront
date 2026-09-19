@@ -58,8 +58,7 @@ Tasks. New task.
 
     =>  1. Date and time: <date-time>
         2. Description:   <string>
-
-    OK?
+        3. OK?
 
 Commands.
 
