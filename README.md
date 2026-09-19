@@ -56,8 +56,8 @@ Tasks. New task.
 
     Task
 
- => Date and time: <date-time>
-    Description:   <string>
+    =>  1. Date and time: <date-time>
+        2. Description:   <string>
 
     OK?
 
@@ -77,10 +77,9 @@ Tasks. New task.
 
     Task
 
-    Date and time: "2026-09-08, 10:00"
- => Description:   <string>
- 
-    OK?
+        1. Date and time: "2026-09-08, 10:00"
+    =>  2. Description:   <string>
+        3. OK?
 
 Commands.
 
@@ -98,10 +97,9 @@ Tasks. New task.
 
     Task
 
-    Date and time: "2026-09-08, 10:00"
-    Description:   "Go to dentist"
-    
- => OK?
+        1. Date and time: "2026-09-08, 10:00"
+        2. Description:   "Go to dentist"
+    =>  3. OK?
 
 Commands.
 
@@ -119,9 +117,9 @@ Tasks.
 
     Task List
 
-    Day, date, time                 Description
+     Index  Day, date, time                 Description
     -------------------------------------------------------------------------
- => Tue, 2026-09-08, 10:00          Go to dentist
+    =>  1.  Tue, 2026-09-08, 10:00          Go to dentist
     -------------------------------------------------------------------------
 
 Commands.
