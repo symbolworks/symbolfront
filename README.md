@@ -19,7 +19,9 @@ When the example session starts, user interface shows:
 ```
 Applications.
 
-Enter a command:
+    Welcome to applications menu. Please enter a command.
+
+Commands.
 
     e-mail
     tasks
@@ -39,7 +41,7 @@ Tasks.
     
     The list is empty.
 
-Enter a command:
+Commands.
 
     new-task
     done
@@ -59,7 +61,7 @@ Tasks. New task.
 
     OK?
 
-Enter a command:
+Commands.
 
     cursor
     <date-time>
@@ -80,7 +82,7 @@ Tasks. New task.
  
     OK?
 
-Enter a command:
+Commands.
 
     cursor
     <string>
@@ -101,7 +103,7 @@ Tasks. New task.
     
  => OK?
 
-Enter a command:
+Commands.
 
     cursor
     accept
@@ -122,7 +124,7 @@ Tasks.
  => Tue, 2026-09-08, 10:00          Go to dentist
     -------------------------------------------------------------------------
 
-Enter a command:
+Commands.
 
     cursor
     new-task
@@ -138,7 +140,9 @@ We enter `done`. We're back to the applications menu:
 ```
 Applications.
 
-Enter a command:
+    Welcome to applications menu. Please enter a command.
+
+Commands.
 
     e-mail
     tasks
