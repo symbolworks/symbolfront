@@ -4,7 +4,7 @@
 
 ## Motivation
 
-In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to symbolic only, in relation to common graphic user interfaces (GUI) built on top of those applications.
+In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to atomic symbols, contrasting the common graphic user interfaces (GUI) built on top of those applications.
 
 Considering the current context within an application, symbolic instructions may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the instructions gain a lot of positive features like simplicity, portability, scriptability, and reproducibility.
 
