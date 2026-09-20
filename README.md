@@ -156,7 +156,7 @@ The example command set is chosen for effective functioning of the example appli
 
 ## A Word About Backend
 
-Symbolback is intended to serve as a backend service to symbolfront. It is a virtual machine passing through various complex states, sending to symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
+Symbolback is intended to serve as a backend service to symbolfront. It is a virtual machine passing through various complex states, sending to symbolfront only necessary contextual information. Thus, along the contextual display image, currently available commands are passed to symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
 
 State transitions are defined by: `S' = σ(S, c)` where `S` is the current state, `c` command is element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
 
