@@ -4,7 +4,7 @@
 
 ## Motivation
 
-In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to atomic symbols, contrasting the common graphic user interfaces (GUI) built on top of those applications.
+In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to symbolic commands, contrasting the common graphic user interfaces (GUI) built on top of those applications.
 
 Considering the current context within an application, symbolic instructions may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the instructions gain a lot of positive features like simplicity, portability, scriptability, and reproducibility.
 
@@ -153,6 +153,10 @@ Commands.
 We enter `done`. The session ends.
 
 The example command set is chosen for effective functioning of the example application, but it is in no way restricted to shown commands. Thus, different applications may offer different command sets, as their functionality requires. That way, surprisingly capable class of applications may be supported by the client.
+
+## A Word About Symbolback
+
+Symbolback is intended to serve as a backend service to symbolfront. It is a virtual machine passing through various complex states, sending to symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available commands. State transitions are defined by: `S' = σ(S, c)` where `S` is the current state, `c` command is element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
 
 ## Summary
 
