@@ -154,7 +154,7 @@ We enter `done`. The session ends.
 
 The example command set is chosen for effective functioning of the example application, but it is in no way restricted to shown commands. Thus, different applications may offer different command sets, as their functionality requires. That way, surprisingly capable class of applications may be supported by the client.
 
-## A Word About Symbolback
+## A Word About Backend
 
 Symbolback is intended to serve as a backend service to symbolfront. It is a virtual machine passing through various complex states, sending to symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
 
