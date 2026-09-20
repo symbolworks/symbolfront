@@ -4,11 +4,9 @@
 
 ## Motivation
 
-In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to symbolic commands, contrasting the common graphic user interfaces (GUI) built on top of those applications.
+In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to simplistic symbolic commands, contrasting the rich user interfaces built on top of those applications. Considering the current context within an application, symbolic command set may be gradually discovered instead of memorizing the entire application instruction set.
 
-Considering the current context within an application, symbolic command set may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the command set gains a lot of positive features like discoverability, portability, scriptability, and reproducibility.
-
-This reduced user interface (UI) platform is not a replacement to traditional GUIs because there are still a lot of applications that work better with graphic environments. But we may also acknowledge that there exists a considerable range of applications whose simplification would benefit from a short and concise set of simple command set at given moment, exchanged between user and application.
+Such reduced user interface (UI) platform is not a replacement to traditional rich UIs because there are still a lot of applications that work better with, for example, keyboard shortcuts and mouse events. But we may also acknowledge that there exists a considerable range of applications whose usability remains acceptable using a concise set of contextual commands exchanged between user and application.
 
 ## A Word About Backend
 
@@ -160,8 +158,8 @@ Commands.
 
 We enter `done`. The session ends.
 
-The example command set is chosen for effective functioning of the example application, but it is in no way restricted to shown commands. Thus, different applications may offer different command sets, as their functionality requires. That way, surprisingly capable class of applications may be supported by the client.
+Shown command sets are chosen for effective functioning of the example application, but it is in no way restricted to those commands. Thus, different applications may offer different command sets required by their functionality. That way, surprisingly capable class of applications may be supported by the client.
 
 ## Summary
 
-Symbolfront deliberately trades GUI expressiveness for simplicity of use. The purpose of this project is to explore how far that trade-off can be taken. GUIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting class of applications.
+Symbolfront deliberately trades richer UI expressiveness for simplicity of appearance. The purpose of this project is to explore how far that trade-off can be taken. Richer UIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting class of applications.
