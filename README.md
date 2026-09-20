@@ -1,18 +1,26 @@
 # Symbolfront
 
-**A symbolic frontend client promoting simplicity in communication between users and applications**
+**A thin, context-driven user interface where applications expose only the commands that are meaningful in the current state.**
 
 ## Motivation
 
 In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to symbolic commands, contrasting the common graphic user interfaces (GUI) built on top of those applications.
 
-Considering the current context within an application, symbolic instructions may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the instructions gain a lot of positive features like simplicity, portability, scriptability, and reproducibility.
+Considering the current context within an application, symbolic command set may be gradually discovered instead of memorizing the entire application instruction set. Being of symbolic nature, the command set gains a lot of positive features like discoverability, portability, scriptability, and reproducibility.
 
-This reduced user interface (UI) platform is not a replacement to traditional GUIs because there are still a lot of applications that work better with graphic environments. But we may also acknowledge that there exists a considerable range of applications whose simplification would benefit from a short and concise set of simple instructions at given moment, exchanged between user and application.
+This reduced user interface (UI) platform is not a replacement to traditional GUIs because there are still a lot of applications that work better with graphic environments. But we may also acknowledge that there exists a considerable range of applications whose simplification would benefit from a short and concise set of simple command set at given moment, exchanged between user and application.
+
+## A Word About Backend
+
+Symbolback is intended to serve as a backend service to Symbolfront. It is a virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display image, currently available commands are passed to Symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
+
+State transitions are defined by: `S' = σ(S, c)` where `S` is the current state, `c` command is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display image and the current command set.
+
+The Symbolback completely takes care of application semantics, and it exposes to the client only commands available in the current application state. The client stays very thin, and utilizing Symbolback, it lets the user  gradually discover commands relative to the current state. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
 
 ## Example Session
 
-We bring an example session in interacting with typical Symbolfront application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context, together with their syntax. That way, the client remains simple while the application takes care of specific functionality regarding the context.
+We bring an example session in interacting with typical Symbolfront application. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context. That way, the client remains simple while the backend takes care of specific functionality regarding the context.
 
 When the example session starts, user interface shows:
 
@@ -153,12 +161,6 @@ Commands.
 We enter `done`. The session ends.
 
 The example command set is chosen for effective functioning of the example application, but it is in no way restricted to shown commands. Thus, different applications may offer different command sets, as their functionality requires. That way, surprisingly capable class of applications may be supported by the client.
-
-## A Word About Backend
-
-Symbolback is intended to serve as a backend service to symbolfront. It is a virtual machine passing through various complex states, sending to symbolfront only necessary contextual information. Thus, along the contextual display image, currently available commands are passed to symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
-
-State transitions are defined by: `S' = σ(S, c)` where `S` is the current state, `c` command is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
 
 ## Summary
 
