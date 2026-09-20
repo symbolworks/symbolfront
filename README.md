@@ -12,9 +12,9 @@ Such reduced user interface (UI) platform is not a replacement to traditional ri
 
 Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to Symbolfront as `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
 
-State transitions are defined as `S' = σ(S, c)` where `S` is the current state, the command `c` is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
+State transitions are defined as `S' = σ(S, c)` where `S` is the current state, the command `c` is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. That way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
 
-The client stays very thin, and utilizing Symbolback, it lets the user  gradually discover commands relative to the current state. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
+The client stays very thin, and utilizing Symbolback, it lets the user  gradually discover commands related to the current state. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
 
 ## Example Session
 
@@ -158,7 +158,7 @@ Commands.
 
 We enter `done`. The session ends.
 
-Shown command sets are chosen for effective functioning of the example application, but it is in no way restricted to those commands. Thus, different applications may offer different command sets required by their functionality. That way, surprisingly capable class of applications may be supported by the client.
+Shown command sets are not fixed, and are chosen for effective functioning of the example application. Different applications may offer different command sets required by their functionality. That approach may cover surprisingly capable class of applications supported by the client.
 
 ## Summary
 
