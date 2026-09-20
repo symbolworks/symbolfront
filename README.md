@@ -8,7 +8,7 @@ In this attempt, we are exploring an experiment where input to a certain class o
 
 Such reduced user interface (UI) platform is not a replacement to traditional rich UIs because there are still a lot of applications that work better with, for example, keyboard shortcuts and mouse events. But we may also acknowledge that there exists a considerable range of applications whose usability remains acceptable using a concise set of contextual commands exchanged between user and application.
 
-## A Word About Backend
+## Backend Relation
 
 Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to Symbolfront as `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
 
