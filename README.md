@@ -12,11 +12,11 @@ This reduced user interface (UI) platform is not a replacement to traditional GU
 
 ## A Word About Backend
 
-Symbolback is intended to serve as a backend service to Symbolfront. It is a virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display image, currently available commands are passed to Symbolfront: `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
+Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to Symbolfront as `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
 
-State transitions are defined by: `S' = σ(S, c)` where `S` is the current state, the command `c` is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display image and the current command set.
+State transitions are defined as `S' = σ(S, c)` where `S` is the current state, the command `c` is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. This way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
 
-The Symbolback completely takes care of application semantics, and it exposes to the client only commands available in the current application state. The client stays very thin, and utilizing Symbolback, it lets the user  gradually discover commands relative to the current state. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
+The client stays very thin, and utilizing Symbolback, it lets the user  gradually discover commands relative to the current state. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
 
 ## Example Session
 
