@@ -73,8 +73,6 @@ Tasks. New task.
 
 Commands.
 
-    first
-    last
     <No.>
 
     <date-time>
@@ -99,8 +97,6 @@ Tasks. New task.
 
 Commands.
 
-    first
-    last
     <No.>
 
     <string>
@@ -125,8 +121,6 @@ Tasks. New task.
 
 Commands.
 
-    first
-    last
     <No.>
 
     accept
@@ -149,9 +143,6 @@ Tasks.
 
 Commands.
 
-    first
-    last
-    today
     <No.>
 
     new-task
@@ -163,7 +154,7 @@ Commands.
 >
 ```
 
-We enter `done`. We're back to the applications menu:
+We enter `done`. We're back to the applications directory:
 
 ```
 Applications.
