@@ -173,7 +173,7 @@ Symbolback is intended to serve as a backend service to Symbolfront. It is a sym
 
 State transitions are defined as `S' = σ(S, c)` where `S` is the current state, the command `c` is an element of `K` command set, `σ` is a backend state transition function, and `S'` is the resulting state. That way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current command set.
 
-The entire message communication between Symbolfront and Symbolback comes down to the following definition: `UI(S) = (D, K)`, where `D` is a current display data for state `S`, and `K` is a current command set for state `S`. That way, the client stays very thin while the Symbolback lets the user gradually discover commands related to the current state. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
+The entire message communication between Symbolfront and Symbolback comes down to the following definition: `UI(S) = (D, K)`, where `D` is a current display data for state `S`, and `K` is a current command set for state `S`. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
 
 ## Summary
 
