@@ -184,7 +184,7 @@ Commands.
 
 We enter `done`. The session ends.
 
-Shown command sets are not fixed, and are chosen for effective functioning of the example application. Different applications may offer different command sets required by their functionality. That approach may cover surprisingly capable class of applications supported by the client.
+Shown command sets are not fixed, and are chosen for effective functioning of the example application. Different applications may offer different command sets required by their functionality. That possibility may cover surprisingly capable class of applications supported by the client.
 
 ## Summary
 
