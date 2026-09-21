@@ -6,7 +6,7 @@
 
 In this attempt, we are exploring an experiment where input to a certain class of applications may be reduced to simplistic symbolic commands, contrasting the rich user interfaces built on top of those applications. Considering the current context within an application, symbolic command set may be gradually discovered instead of memorizing the entire application instruction set.
 
-Such reduced user interface (UI) platform is not a replacement to traditional rich UIs because there are still a lot of applications that work better with, for example, keyboard shortcuts and mouse events. But we may also acknowledge that there exists a considerable range of applications whose usability remains acceptable using a concise set of contextual commands exchanged between user and application.
+Such reduced user interface (UI) is not a replacement to traditional rich UIs because there are still a lot of applications that work better with, for example, keyboard shortcuts and mouse events. But we may also acknowledge that there exists a considerable range of applications whose usability remains acceptable using a concise set of contextual commands exchanged between user and application.
 
 ## Backend Relation
 
@@ -25,7 +25,7 @@ When the example session starts, user interface shows:
 ```
 Applications.
 
-    Welcome to applications menu. Please enter a command.
+    Welcome to applications directory. Please enter a command.
 
 Commands.
 
@@ -33,6 +33,7 @@ Commands.
     tasks
     notes
     calc
+
     done
 
 >
@@ -50,6 +51,7 @@ Tasks.
 Commands.
 
     new-task
+    
     done
 
 >
@@ -62,13 +64,19 @@ Tasks. New task.
 
     Task
 
+       No. Field           Data
+    -------------------------------------------------------
     =>  1. Date and time: <date-time>
         2. Description:   <string>
         3. OK?
+    -------------------------------------------------------
 
 Commands.
 
-    cursor
+    first
+    last
+    <No.>
+
     <date-time>
     reject
 
@@ -82,13 +90,19 @@ Tasks. New task.
 
     Task
 
+       No. Field           Data
+    -------------------------------------------------------
         1. Date and time: "2026-09-08, 10:00"
     =>  2. Description:   <string>
         3. OK?
+    -------------------------------------------------------
 
 Commands.
 
-    cursor
+    first
+    last
+    <No.>
+
     <string>
     reject
 
@@ -102,13 +116,19 @@ Tasks. New task.
 
     Task
 
+       No. Field           Data
+    -------------------------------------------------------
         1. Date and time: "2026-09-08, 10:00"
         2. Description:   "Go to dentist"
     =>  3. OK?
+    -------------------------------------------------------
 
 Commands.
 
-    cursor
+    first
+    last
+    <No.>
+
     accept
     reject
 
@@ -122,17 +142,22 @@ Tasks.
 
     Task List
 
-       Index  Day, date, time                 Description
+       No.  Day, date, time                 Description
     -------------------------------------------------------------------------
-    =>    1.  Tue, 2026-09-08, 10:00          Go to dentist
+    =>  1.  Tue, 2026-09-08, 10:00          Go to dentist
     -------------------------------------------------------------------------
 
 Commands.
 
-    cursor
+    first
+    last
+    today
+    <No.>
+
     new-task
     edit-task
     delete-task
+
     done
 
 >
@@ -143,7 +168,7 @@ We enter `done`. We're back to the applications menu:
 ```
 Applications.
 
-    Welcome to applications menu. Please enter a command.
+    Welcome to applications directory. Please enter a command.
 
 Commands.
 
@@ -151,6 +176,7 @@ Commands.
     tasks
     notes
     calc
+
     done
 
 >
