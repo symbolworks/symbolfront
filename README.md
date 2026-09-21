@@ -4,7 +4,7 @@
 
 ## The idea
 
-This project explores whether input to a certain class of applications can be reduced to simplistic symbolic commands, contrasting the rich clients built on top of those applications. Considering the current state of an application, symbolic command set may be contextually discovered instead of memorizing the entire application instruction set.
+This project explores whether input to a certain class of applications can be reduced to symbolic commands, contrasting the rich clients built on top of those applications. Considering the current state of an application, symbolic command set may be contextually discovered instead of memorizing the entire application instruction set.
 
 The current command set, thus, depends on the current state while the current state changes after a command is entered. The client remains as thin as possible while the stateful application takes responsibility of informing the client of the current contextual display data and currently available commands.
 
