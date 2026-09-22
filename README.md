@@ -56,11 +56,11 @@ Tasks. New task.
 
     Task
 
-     No. Field             Data
+     No.  Field             Data
     -------------------------------------------------------
-    ▶ 1. Date and time     <date-time>
-      2. Description       <string>
-      3. OK?
+    ▶ 1.  Date and time     <date-time>
+      2.  Description       <string>
+      3.  OK?
     -------------------------------------------------------
 
 Commands.
@@ -80,11 +80,11 @@ Tasks. New task.
 
     Task
 
-     No. Field             Data
+     No.  Field             Data
     -------------------------------------------------------
-      1. Date and time     "2026-09-08, 10:00"
-    ▶ 2. Description       <string>
-      3. OK?
+      1.  Date and time     "2026-09-08, 10:00"
+    ▶ 2.  Description       <string>
+      3.  OK?
     -------------------------------------------------------
 
 Commands.
@@ -104,11 +104,11 @@ Tasks. New task.
 
     Task
 
-     No. Field             Data
+     No.  Field             Data
     -------------------------------------------------------
-      1. Date and time     "2026-09-08, 10:00"
-      2. Description       "Go to dentist"
-    ▶ 3. OK?
+      1.  Date and time     "2026-09-08, 10:00"
+      2.  Description       "Go to dentist"
+    ▶ 3.  OK?
     -------------------------------------------------------
 
 Commands.
