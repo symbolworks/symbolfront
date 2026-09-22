@@ -126,8 +126,8 @@ We enter `accept`. We're back to the tasks menu:
 ```
 Tasks.
 
-    Task List
-
+    Task List - This Week
+    
      No.  Day, date, time                 Description
     -------------------------------------------------------------------------
     ▶ 1.  Tue, 2026-09-08, 10:00          Go to dentist
@@ -135,6 +135,8 @@ Tasks.
 
 Commands.
 
+    filter
+    
     <No.>
 
     new-task
