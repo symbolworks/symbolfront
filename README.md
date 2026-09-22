@@ -167,7 +167,7 @@ Commands.
 
 We enter `done`. The session ends.
 
-## Connection to backend
+## Relation to backend
 
 Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available commands are passed to Symbolfront as `K = κ(S)` where `S` is the current application state and `κ` is a function returning the available command set.
 
