@@ -6,7 +6,7 @@
 
 This project explores whether input to a certain class of applications can be reduced to symbolic commands, contrasting the rich clients built on top of those applications. Considering the current state of an application, symbolic command set may be contextually discovered instead of memorizing the entire application instruction set.
 
-The current command set, thus, depends on the application current state while the current state changes after a command is entered on the client. The client remains as thin as possible while the application takes responsibility of receiving the next command and informing the client of changed contextual display data and currently available commands.
+The current command set, thus, depends on the application current state while the current state changes after a command is entered to the client. The client remains as thin as possible while the application takes responsibility of receiving the next command and informing the client of changed contextual display data and currently available commands.
 
 ## Example
 
