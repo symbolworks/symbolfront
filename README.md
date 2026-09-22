@@ -6,11 +6,11 @@
 
 This project explores whether input to a certain class of applications can be reduced to symbolic commands, contrasting the rich clients built on top of those applications. Considering the current state of an application, symbolic command set may be contextually discovered instead of memorizing the entire application instruction set.
 
-The current command set, thus, depends on the application current state while the current state changes after a command is entered to the client. The client remains as thin as possible while the application takes responsibility of receiving the next command and informing the client of changed contextual display data and currently available commands.
+The current command set, thus, depends on the application's current state while the current state changes after a command is entered to the client. The client remains as thin as possible while the application takes responsibility of receiving the next command and informing the client of changed contextual display data and currently available commands.
 
 ## Example
 
-We bring a self-explanatory example session in interacting with typical Symbolfront user interface. The client does not contain knowledge of any application commands. Instead, during runtime, the current application context provides a set of commands available in that context.
+The following example illustrates a typical Symbolfront session. The client contains no application-specific command vocabulary. Instead, during runtime, the current application context provides a set of commands available in that context.
 
 When the example session starts, user interface shows:
 
@@ -194,6 +194,8 @@ The upwards message communication from Symbolback to Symbolfront comes down to t
 • • • • • • • • • • • • • • • • • • • •
 
 ```
+
+The client doesn't need to understand the transition function `σ`. It only needs to: display `D`, expose `K`, collect/select a command `c ∈ K`, and send `c` back.
 
 ## Summary
 
