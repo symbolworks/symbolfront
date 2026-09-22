@@ -36,9 +36,7 @@ We write `tasks` and press [enter]. UI responds:
 ```
 Tasks.
     
-    Task List
-    
-    The list is empty.
+    Task List - the list is empty.
 
 Commands.
 
@@ -126,7 +124,7 @@ We enter `accept`. We're back to the tasks menu:
 ```
 Tasks.
 
-    Task List - This Week
+    Task List - This week
     
      No.  Day, date, time                 Description
     -------------------------------------------------------------------------
