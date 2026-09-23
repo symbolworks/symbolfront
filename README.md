@@ -133,13 +133,9 @@ Tasks.
 
 Commands.
 
-    filter
-    
     <No.>
-
-    new-task
-    edit-task
-    delete-task
+    filter
+    alter
 
     done
 
