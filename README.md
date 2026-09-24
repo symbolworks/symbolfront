@@ -24,7 +24,7 @@ Commands.
     tasks
     notes
     datatree
-    calc
+    microcalc
 
     done
 
@@ -154,7 +154,7 @@ Commands.
     tasks
     notes
     datatree
-    calc
+    microcalc
 
     done
 
