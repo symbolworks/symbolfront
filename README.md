@@ -21,9 +21,9 @@ Applications.
 
 Commands.
 
-    email
     tasks
     notes
+    datatree
     calc
 
     done
@@ -151,9 +151,9 @@ Applications.
 
 Commands.
 
-    email
     tasks
     notes
+    datatree
     calc
 
     done
