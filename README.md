@@ -10,7 +10,7 @@ The current action set, thus, depends on the application's current state while t
 
 ## Example
 
-The following example illustrates a typical Symbolfront session. The client contains no application-specific action vocabulary. Instead, during runtime, the current application context provides a set of actions available in that context.
+The following example illustrates a typical Symbolfront session. The client contains no application-specific action vocabulary. Instead, during runtime, as the context changes, the application provides a set of actions available in that context.
 
 When the example session starts, user interface shows:
 
