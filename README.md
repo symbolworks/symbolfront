@@ -1,6 +1,6 @@
 # Symbolfront
 
-**A thin, context-driven client where applications expose only the actions that are meaningful in the current state.**
+**A context-driven client that exposes only the actions available in the application's current state.**
 
 ## The idea
 
@@ -26,7 +26,7 @@ Applications.
     datatree
     microcalc
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ Choose ] [ Done ]
  
@@ -44,7 +44,7 @@ Tasks.
     
     Task List - The list is empty.
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ New task ] [ Done ]
 ```
@@ -60,7 +60,7 @@ Tasks. New task.
     Time:          <time>
     Description:   <string>
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ Cancel ]
  
@@ -71,7 +71,7 @@ Tasks. New task.
      alt                  space                  alt           ▼ 
 ```
 
-`2026-09-08` `enter`
+`2` `0` `2` `6` `-` `0` `9` `-` `0` `8` `enter`
 
 ```
 -- context ---------------------------------------------------------------------
@@ -82,7 +82,7 @@ Tasks. New task.
     Time:        ▶ <time> ◀
     Description:   <string>
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ Cancel ]
  
@@ -93,7 +93,7 @@ Tasks. New task.
      alt                  space                  alt           ▼ 
 ```
 
-`10:00` `enter`
+`1` `0` `:` `0` `0` `enter`
 
 ```
 -- context ---------------------------------------------------------------------
@@ -104,7 +104,7 @@ Tasks. New task.
     Time:          10:00
     Description: ▶ <string> ◀
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ Accept ] [ Cancel ]
 
@@ -115,7 +115,7 @@ Tasks. New task.
      alt                  space                  alt           ▼ 
 ```
 
-`Go to dentist` `[ Accept ]`
+`G` `o` `space` `t` `o` `space` `d` `e` `n` `t` `i` `s` `t` `enter`
 
 ```
 -- context ---------------------------------------------------------------------
@@ -128,7 +128,7 @@ Tasks.
      --------------------------------------------
    ▶  1.  Tue, 2026-09-08, 10:00    Go to dentist ◀
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ Filter ] [ New task ] [ Edit task ] [ Delete task ] [ Done ]
  
@@ -152,7 +152,7 @@ Applications.
     datatree
     microcalc
 
--- action ----------------------------------------------------------------------
+-- actions ---------------------------------------------------------------------
 
  [ Choose ] [ Done ]
  
