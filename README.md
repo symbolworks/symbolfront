@@ -123,13 +123,13 @@ Tasks.
 
     Task List - This week
     
-     No.  Day, date, time                 Description
+     No.  Day, date, time           Description
 
-    ▶ 1.  Tue, 2026-09-08, 10:00          Go to dentist ◀
+   ▶  1.  Tue, 2026-09-08, 10:00    Go to dentist ◀
 
 -- action ----------------------------------------------------------------------
 
- [ Filter ] [ Alter ] [ Done ]
+ [ Filter ] [ Alter list ] [ Done ]
                                                                ▲        
                                                             ◀     ▶     
                                                                ▼        
