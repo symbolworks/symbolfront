@@ -6,7 +6,7 @@
 
 This project explores whether input to a certain class of applications can be reduced to symbolic actions, contrasting the rich clients built on top of those applications. Considering the current state of an application, symbolic action set may be contextually discovered instead of memorizing the entire application instruction set.
 
-The current action set, thus, depends on the application's current state while the current state changes after an action is entered to the client. The client remains as thin as possible while the application takes responsibility of receiving the next action and informing the client of changed contextual display data and currently available actions.
+The current action set, thus, depends on the application's current state while the current state changes after an action is entered to the client. The client remains as thin as possible while the application takes responsibility of receiving the next action and informing back the client of changed contextual display data and currently available actions.
 
 ## Example
 
