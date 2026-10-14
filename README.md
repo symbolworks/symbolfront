@@ -188,7 +188,7 @@ The upwards message communication from Symbolback to Symbolfront comes down to t
 
 ```
 
-The client doesn't need to understand the transition function `σ`. It only needs to: display `D`, expose `A`, select/construct a parameterized action `a ∈ A`, and send the `a` back.
+The client doesn't need to understand the transition function `σ`. It only needs to: display `D`, expose `A`, select/construct on its own a parameterized action `a ∈ A`, and send the `a` back.
 
 ## Summary
 
