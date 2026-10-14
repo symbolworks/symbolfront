@@ -23,7 +23,7 @@ Applications.
 
   ▶ tasks ◀
     notes
-    datatree
+    outliner
     microcalc
 
 -- actions ---------------------------------------------------------------------
@@ -115,7 +115,7 @@ Tasks. New task.
      alt                  space                  alt           ▼ 
 ```
 
-`G` `o` `space` `t` `o` `space` `d` `e` `n` `t` `i` `s` `t` `enter`
+`shift` `G` `o` `space` `t` `o` `space` `d` `e` `n` `t` `i` `s` `t` `enter`
 
 ```
 -- context ---------------------------------------------------------------------
@@ -149,7 +149,7 @@ Applications.
 
   ▶ tasks ◀
     notes
-    datatree
+    outliner
     microcalc
 
 -- actions ---------------------------------------------------------------------
@@ -165,11 +165,11 @@ Applications.
 
 ## Relation to backend
 
-Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to Symbolfront as `A = α(S)` where `S` is the current application state and `α` is a function returning the available action set.
+Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to Symbolfront as `A = α(S)` where `S` is the current application state and `α` is a function returning the available parameterized action set.
 
 State transitions are defined as `S' = σ(S, a)` where `S` is the current state, the parameterized action `a` is an element of `A` action set, `σ` is a backend state transition function, and `S'` is the resulting state. That way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current action set.
 
-The upwards message communication from Symbolback to Symbolfront comes down to the following definition: `(D, A) = Context(S)`, where `D` is a current display data for state `S`, and `A` is a current action set for state `S`. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
+The upwards message communication from Symbolback to Symbolfront comes down to the following definition: `(D', A') = Context(S')`, where `D'` is a current display data for state `S'`, and `A'` is a current action set for state `S'`. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
 
 ```
 • • • • • • • • • • • • • • • • • • • • • • • •
@@ -188,7 +188,6 @@ The upwards message communication from Symbolback to Symbolfront comes down to t
 • • • • • • • • • • • • • • • • • • • • • • • •
 •                 Symbolback                  •
 • • • • • • • • • • • • • • • • • • • • • • • •
-
 ```
 
 The client doesn't need to understand the transition function `σ`. It only needs to: display `D`, expose `A`, select/construct on its own a parameterized action `a ∈ A`, and send the `a` back.
