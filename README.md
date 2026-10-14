@@ -93,7 +93,7 @@ Tasks. New task.
      alt                  space                  alt           ▼ 
 ```
 
-`1` `0` `:` `0` `0` `enter`
+`1` `0` `shift` `:` `shift` `0` `0` `enter`
 
 ```
 -- context ---------------------------------------------------------------------
@@ -195,4 +195,4 @@ The client doesn't need to understand the transition function `σ`. It only need
 
 ## Summary
 
-Symbolfront deliberately trades richer UI expressiveness for simplicity of appearance. The purpose of this project is to explore how far that trade-off can be taken. Richer UIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting class of applications.
+Symbolfront deliberately trades richer UI expressiveness for simplicity of appearance. The purpose of this project is to explore how far that trade-off can be taken. Richer UIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting balance between simplicity, discoverability, and expressive power.
