@@ -19,14 +19,16 @@ When the example session starts, user interface shows:
 
 Applications.
 
-    Welcome to applications directory.
+  Welcome to applications directory.
     
-    Which app would you like to start?
+  Which app would you like to start?
 
+  -------------
   ▶ tasks ◀
     notes
-    outlines
+    outliner
     microcalc
+  -------------
 
 -- actions ---------------------------------------------------------------------
 
@@ -42,7 +44,7 @@ We click `[ Choose ]`. UI responds:
 
 Tasks.
     
-    Task List - The list is empty.
+  Task List - The list is empty.
 
 -- actions ---------------------------------------------------------------------
 
@@ -58,9 +60,9 @@ We click `[ New task ]`.
 
 Tasks. New task.
 
-    Date:        ▶ <date> ◀
-    Time:          <time>
-    Description:   <string>
+  |        Date: ▶ <YYYY-MM-DD> ◀ |
+  |        Time:   <HH:MM>        |
+  | Description:   <text>         |
 
 -- actions ---------------------------------------------------------------------
 
@@ -76,9 +78,9 @@ We type `2026-09-08` and press `enter`.
 
 Tasks. New task.
 
-    Date:          2026-09-08
-    Time:        ▶ <time> ◀
-    Description:   <string>
+  |        Date:   2026-09-08 |
+  |        Time: ▶ <HH:MM> ◀  |
+  | Description:   <text>     |
 
 -- actions ---------------------------------------------------------------------
 
@@ -94,9 +96,9 @@ We type `10:00` and press `enter`.
 
 Tasks. New task.
 
-    Date:          2026-09-08
-    Time:          10:00
-    Description: ▶ <string> ◀
+  |        Date:   2026-09-08 |
+  |        Time:   10:00      |
+  | Description: ▶ <text> ◀   |
 
 -- actions ---------------------------------------------------------------------
 
@@ -112,11 +114,11 @@ We type `Go to dentist` and press `enter`. New task is added.
 
 Tasks.
 
-    Task List - This week
-    
-    No.  Day, date, time           Description
+  Task List - This week
 
-  ▶  1.  Tue, 2026-09-08, 10:00    Go to dentist ◀
+  |   No.  Day, date, time           Description     |
+  |                                                  |
+  | ▶  1.  Tue, 2026-09-08, 10:00    Go to dentist ◀ |
 
 -- actions ---------------------------------------------------------------------
 
@@ -132,15 +134,17 @@ We click `[ Done ]`.
 
 Applications.
 
-    Welcome to applications directory.
+  Welcome to applications directory.
     
-    Which app would you like to start?
-
+  Which app would you like to start?
+    
+  -------------
   ▶ tasks ◀
     notes
     outliner
     microcalc
-
+  -------------
+  
 -- actions ---------------------------------------------------------------------
 
  [ Choose ] [ Done ]
