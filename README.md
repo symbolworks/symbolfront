@@ -30,12 +30,10 @@ Applications.
 
  [ Choose ] [ Done ]
  
-                                                               ▲        
-                                                            ◀     ▶     
-                                                               ▼        
+-- cursor -- mouse -- touch ----------------------------------------------------
 ```
 
-We select `[ Choose ]`. UI responds:
+We click `[ Choose ]`. UI responds:
 
 ```
 -- context ---------------------------------------------------------------------
@@ -47,9 +45,11 @@ Tasks.
 -- actions ---------------------------------------------------------------------
 
  [ New task ] [ Done ]
+
+--------------------------------------------------------------------------------
 ```
 
-`[ New task ]`
+We click `[ New task ]`.
 
 ```
 -- context ---------------------------------------------------------------------
@@ -64,14 +64,10 @@ Tasks. New task.
 
  [ Cancel ]
  
- `   1   2   3   4   5   6   7   8   9   0   -   =     ⌫ 
- tab   q   w   e   r   t   y   u   i   o   p   [   ]   \ 
- caps   a   s   d   f   g   h   j   k   l   ;   '   enter      ▲ 
- shift    z   x   c   v   b   n   m   ,   .   /     shift   ◀     ▶ 
-     alt                  space                  alt           ▼ 
+-- cursor -- alpha -- num -- mouse -- touch ------------------------------------
 ```
 
-`2` `0` `2` `6` `-` `0` `9` `-` `0` `8` `enter`
+We type `2026-09-08` and press `enter`.
 
 ```
 -- context ---------------------------------------------------------------------
@@ -86,14 +82,10 @@ Tasks. New task.
 
  [ Cancel ]
  
- `   1   2   3   4   5   6   7   8   9   0   -   =     ⌫ 
- tab   q   w   e   r   t   y   u   i   o   p   [   ]   \ 
- caps   a   s   d   f   g   h   j   k   l   ;   '   enter      ▲ 
- shift    z   x   c   v   b   n   m   ,   .   /     shift   ◀     ▶ 
-     alt                  space                  alt           ▼ 
+-- cursor -- alpha -- num -- mouse -- touch ------------------------------------
 ```
 
-`1` `0` `shift` `:` `0` `0` `enter`
+We type `10:00` and press `enter`.
 
 ```
 -- context ---------------------------------------------------------------------
@@ -106,16 +98,12 @@ Tasks. New task.
 
 -- actions ---------------------------------------------------------------------
 
- [ Accept ] [ Cancel ]
+ [ Cancel ]
 
- `   1   2   3   4   5   6   7   8   9   0   -   =     ⌫ 
- tab   q   w   e   r   t   y   u   i   o   p   [   ]   \ 
- caps   a   s   d   f   g   h   j   k   l   ;   '   enter      ▲ 
- shift    z   x   c   v   b   n   m   ,   .   /     shift   ◀     ▶ 
-     alt                  space                  alt           ▼ 
+-- cursor -- alpha -- num -- mouse -- touch ------------------------------------
 ```
 
-`shift` `G` `o` `space` `t` `o` `space` `d` `e` `n` `t` `i` `s` `t` `enter`
+We type `Go to dentist` and press `enter`. New task is added.
 
 ```
 -- context ---------------------------------------------------------------------
@@ -132,13 +120,10 @@ Tasks.
 
  [ Filter ] [ New task ] [ Edit task ] [ Delete task ] [ Done ]
  
-                                                               ▲        
-                                                            ◀     ▶     
-                                                               ▼        
-
+-- cursor -- mouse -- touch ----------------------------------------------------
 ```
 
-`[ Done ]`
+We click `[ Done ]`.
 
 ```
 -- context ---------------------------------------------------------------------
@@ -156,12 +141,10 @@ Applications.
 
  [ Choose ] [ Done ]
  
-                                                               ▲        
-                                                            ◀     ▶     
-                                                               ▼        
+-- cursor -- mouse -- touch ----------------------------------------------------
 ```
 
-`[ Done ]`
+We click `[ Done ]`. The session ends.
 
 ## Relation to backend
 
