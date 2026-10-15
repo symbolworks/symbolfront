@@ -21,7 +21,7 @@ Applications.
 
     Welcome to applications directory.
     
-    What app would you like to start?
+    Which app would you like to start?
 
   ▶ tasks ◀
     notes
