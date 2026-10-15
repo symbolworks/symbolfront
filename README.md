@@ -19,11 +19,13 @@ When the example session starts, user interface shows:
 
 Applications.
 
-    Welcome to applications directory. Please select an item.
+    Welcome to applications directory.
+    
+    What app would you like to start?
 
   ▶ tasks ◀
     notes
-    outliner
+    outlines
     microcalc
 
 -- actions ---------------------------------------------------------------------
