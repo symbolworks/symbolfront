@@ -21,13 +21,13 @@ Applications.
 
   Welcome to applications directory.
     
-  Which app would you like to start?
+  Which application would you like to start?
 
   -------------
   ▶ tasks ◀
     notes
     outliner
-    microcalc
+    calculator
   -------------
 
 -- actions ---------------------------------------------------------------------
@@ -136,13 +136,13 @@ Applications.
 
   Welcome to applications directory.
     
-  Which app would you like to start?
+  Which application would you like to start?
     
   -------------
   ▶ tasks ◀
     notes
     outliner
-    microcalc
+    calculator
   -------------
   
 -- actions ---------------------------------------------------------------------
