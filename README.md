@@ -15,7 +15,7 @@ The following example illustrates a typical Symbolfront session. The client cont
 When the example session starts, user interface shows:
 
 ```
-  [ Tasks ]
+[ Tasks ]
 
 -- context ---------------------------------------------------------------------
     
@@ -31,7 +31,7 @@ When the example session starts, user interface shows:
 We click `[ New task ]`. The UI responds:
 
 ```
-  [ Tasks ]
+[ Tasks ]
 
 -- context ---------------------------------------------------------------------
 
@@ -51,7 +51,7 @@ We click `[ New task ]`. The UI responds:
 We type `2026-09-08` and press `enter`.
 
 ```
-  [ Tasks ]
+[ Tasks ]
 
 -- context ---------------------------------------------------------------------
 
@@ -71,7 +71,7 @@ We type `2026-09-08` and press `enter`.
 We type `10:00` and press `enter`.
 
 ```
-  [ Tasks ]
+[ Tasks ]
 
 -- context ---------------------------------------------------------------------
 
@@ -91,7 +91,7 @@ We type `10:00` and press `enter`.
 We type `Go to dentist` and press `enter`. New task is added.
 
 ```
-  [ Tasks ]
+[ Tasks ]
 
 -- context ---------------------------------------------------------------------
 
