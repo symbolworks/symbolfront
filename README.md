@@ -15,9 +15,9 @@ The following example illustrates a typical Symbolfront session. The client cont
 When the example session starts, user interface shows:
 
 ```
--- context ---------------------------------------------------------------------
+  [ Tasks ]
 
-Tasks.
+-- context ---------------------------------------------------------------------
     
   Task List - The list is empty.
 
@@ -31,9 +31,11 @@ Tasks.
 We click `[ New task ]`. The UI responds:
 
 ```
+  [ Tasks ]
+
 -- context ---------------------------------------------------------------------
 
-Tasks. New task.
+  New task
 
   |        Date: ▶ <YYYY-MM-DD> ◀ |
   |        Time:   <HH:MM>        |
@@ -49,9 +51,11 @@ Tasks. New task.
 We type `2026-09-08` and press `enter`.
 
 ```
+  [ Tasks ]
+
 -- context ---------------------------------------------------------------------
 
-Tasks. New task.
+  New task
 
   |        Date:   2026-09-08 |
   |        Time: ▶ <HH:MM> ◀  |
@@ -67,9 +71,11 @@ Tasks. New task.
 We type `10:00` and press `enter`.
 
 ```
+  [ Tasks ]
+
 -- context ---------------------------------------------------------------------
 
-Tasks. New task.
+  New task
 
   |        Date:   2026-09-08 |
   |        Time:   10:00      |
@@ -85,9 +91,9 @@ Tasks. New task.
 We type `Go to dentist` and press `enter`. New task is added.
 
 ```
--- context ---------------------------------------------------------------------
+  [ Tasks ]
 
-Tasks.
+-- context ---------------------------------------------------------------------
 
   Task List - This week
 
