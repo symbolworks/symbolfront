@@ -17,31 +17,6 @@ When the example session starts, user interface shows:
 ```
 -- context ---------------------------------------------------------------------
 
-Applications.
-
-  Welcome to applications directory.
-    
-  Which application would you like to start?
-
-  -------------
-  ▶ tasks ◀
-    notes
-    outliner
-    calculator
-  -------------
-
--- actions ---------------------------------------------------------------------
-
-  [ Choose ]  [ Done ]
- 
--- cursor -- mouse -- touch ----------------------------------------------------
-```
-
-We click `[ Choose ]`. UI responds:
-
-```
--- context ---------------------------------------------------------------------
-
 Tasks.
     
   Task List - The list is empty.
@@ -53,7 +28,7 @@ Tasks.
 --------------------------------------------------------------------------------
 ```
 
-We click `[ New task ]`.
+We click `[ New task ]`. The UI responds:
 
 ```
 -- context ---------------------------------------------------------------------
@@ -123,31 +98,6 @@ Tasks.
 -- actions ---------------------------------------------------------------------
 
   [ Filter ]  [ Alter list ]  [ Done ]
- 
--- cursor -- mouse -- touch ----------------------------------------------------
-```
-
-We click `[ Done ]`.
-
-```
--- context ---------------------------------------------------------------------
-
-Applications.
-
-  Welcome to applications directory.
-    
-  Which application would you like to start?
-    
-  -------------
-  ▶ tasks ◀
-    notes
-    outliner
-    calculator
-  -------------
-  
--- actions ---------------------------------------------------------------------
-
-  [ Choose ]  [ Done ]
  
 -- cursor -- mouse -- touch ----------------------------------------------------
 ```
