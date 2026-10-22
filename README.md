@@ -6,7 +6,7 @@
 
 This project explores whether a frontend can be separated from middleware, exposing in frontend only the current context and available action set that may operate on that context. The middleware becomes responsible for maintaining application states which respond to sent actions, and which generate a new context.
 
-From the user side, the frontend still serves to output context data and input contextually depended actions, but its role is more limited than in classical frontends that embrace the entire user interfacing logic. In Symbolfront, a considerable part of that logic is delegated to the middleware which maintains its states synchronized with the bare frontend.
+From the user side, the frontend still serves to output context data and input contextually dependent actions, but its role is more limited than in classical frontends that embrace the entire user interfacing logic. In Symbolfront, a considerable part of that logic is delegated to the middleware which maintains its states synchronized with the bare frontend.
 
 The frontend thus becomes a very thin client that manages raw input and output from the user. The middleware possibly offers an arbitrary set of controls that output the current context. Some minimal set of controls may include, but is not limited to messages, lists, tables and input forms. Responding back with an action, the user decides which one to send to the middleware, expecting a new context to appear in the frontend.
 
@@ -20,12 +20,12 @@ When the example session starts, user interface shows:
 [ Tasks ]
 
 -- context ---------------------------------------------------------------------
-    
-  Task List - The list is empty
+    
+  Task List - The list is empty
 
 -- actions ---------------------------------------------------------------------
 
-  [ New task ]  [ Done ]
+  [ New task ]  [ Done ]
 
 --------------------------------------------------------------------------------
 ```
@@ -37,16 +37,16 @@ We click `[ New task ]`. The UI responds:
 
 -- context ---------------------------------------------------------------------
 
-  New task
+  New task
 
-  |        Date: ▶<YYYY-MM-DD>◀ |
-  |        Time:  <HH:MM>       |
-  | Description:  <text>        |
+  |        Date: <YYYY-MM-DD> |
+  |        Time:  <HH:MM>       |
+  | Description:  <text>        |
 
 -- actions ---------------------------------------------------------------------
 
-  [ Cancel ]
- 
+  [ Cancel ]
+ 
 -- cursor -- alpha -- num -- mouse -- touch ------------------------------------
 ```
 
@@ -57,16 +57,16 @@ We type `2026-09-08` and press `enter`.
 
 -- context ---------------------------------------------------------------------
 
-  New task
+  New task
 
-  |        Date:  2026-09-08 |
-  |        Time: ▶<HH:MM>◀   |
-  | Description:  <text>     |
+  |        Date:  2026-09-08 |
+  |        Time: <HH:MM>   |
+  | Description:  <text>     |
 
 -- actions ---------------------------------------------------------------------
 
-  [ Cancel ]
- 
+  [ Cancel ]
+ 
 -- cursor -- alpha -- num -- mouse -- touch ------------------------------------
 ```
 
@@ -77,15 +77,15 @@ We type `10:00` and press `enter`.
 
 -- context ---------------------------------------------------------------------
 
-  New task
+  New task
 
-  |        Date:  2026-09-08 |
-  |        Time:  10:00      |
-  | Description: ▶<text>◀    |
+  |        Date:  2026-09-08 |
+  |        Time:  10:00      |
+  | Description: <text>    |
 
 -- actions ---------------------------------------------------------------------
 
-  [ Cancel ]
+  [ Cancel ]
 
 -- cursor -- alpha -- num -- mouse -- touch ------------------------------------
 ```
@@ -97,16 +97,16 @@ We type `Go to dentist` and press `enter`. New task is added.
 
 -- context ---------------------------------------------------------------------
 
-  Task List - This week
+  Task List - This week
 
-  |  No.  Day, date, time           Description    |
-  |                                                |
-  | ▶ 1.◀  Tue, 2026-09-08, 10:00    Go to dentist |
+  |  No.  Day, date, time           Description    |
+  |                                                |
+  | 1.  Tue, 2026-09-08, 10:00    Go to dentist |
 
 -- actions ---------------------------------------------------------------------
 
-  [ Filter ]  [ Alter list ]  [ Done ]
- 
+  [ Filter ]  [ Alter list ]  [ Done ]
+ 
 -- cursor -- mouse -- touch ----------------------------------------------------
 ```
 
@@ -114,7 +114,7 @@ We click `[ Done ]`. The session ends.
 
 ## Relation between frontend and middleware
 
-Middleware is a symbolic virtual machine passing through various complex states, sending to frontend only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to frontend as `A = α(S)` where `S` is the current application state and `α` is a function returning the available action set.
+Middleware is a symbolic virtual machine passing through various complex states, sending to frontend only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to the frontend as `A = α(S)` where `S` is the current application state and `α` is a function returning the available action set.
 
 State transitions are defined as `S' = σ(S, a)` where `S` is the current state, action `a` is an element of `A` action set, `σ` is a middleware state transition function, and `S'` is the resulting state. That way, for proper functioning, the frontend doesn't have to be aware of anything else but the current contextual display data and the current action set.
 
@@ -122,20 +122,20 @@ The upwards message communication from middleware to frontend brings the followi
 
 ```
 • • • • • • • • • • • • • • • • • • • • • • • •
-•                  frontend                   •
+•                  frontend                   •
 • • • • • • • • • • • • • • • • • • • • • • • •
-          ▲                         •
-          •                         •
-          •                         •
-• • • • • • • • • • •     • • • • • • • • • • •
-•     context,      •     •       action      •
-•    action set     •     •                   •
-• • • • • • • • • • •     • • • • • • • • • • •
-          •                         •
-          •                         •
-          •                         ▼
+          ▲                         •
+          •                         •
+          •                         •
+• • • • • • • • • • •     • • • • • • • • • • •
+•     context,      •     •       action      •
+•    action set     •     •                   •
+• • • • • • • • • • •     • • • • • • • • • • •
+          •                         •
+          •                         •
+          •                         ▼
 • • • • • • • • • • • • • • • • • • • • • • • •
-•                  middleware                 •
+•                  middleware                 •
 • • • • • • • • • • • • • • • • • • • • • • • •
 ```
 
@@ -143,6 +143,6 @@ The frontend doesn't need to understand the transition function `σ`. It only ne
 
 ## Summary
 
-Frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users, land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
+Frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
 
 The separation of user actions from computing responses may hopefully bring some benefits that may include consistency and simplicity in designing and experiencing application user interface. Being an experimental excursion, this architecture still needs to prove itself in real use cases.
