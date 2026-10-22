@@ -1,16 +1,18 @@
 # Symbolfront
 
-**A context-driven client that exposes only the actions available in the application's current state.**
+**A context-driven frontend that exposes only the context and actions originating from the middleware's current state.**
 
 ## The idea
 
-This project explores whether input to a certain class of applications can be reduced to symbolic actions, contrasting the rich clients built on top of those applications. Considering the current state of an application, symbolic action set may be contextually discovered instead of memorizing the entire application instruction set.
+This project explores whether a frontend can be separated from middleware, exposing in frontend only the current context and available action set that may operate on that context. The middleware becomes responsible for maintaining application states which respond to sent actions, and which generate a new context.
 
-The current action set, thus, depends on the application's current state while the current state changes after an action is entered to the client. The client remains as thin as possible while the application takes responsibility of receiving the next action and informing back the client of changed contextual display data and available actions.
+From the user side, the frontend still serves to output context data and input contextually depended actions, but its role is more limited than in classical frontends that embrace the entire user interfacing logic. In Symbolfront, a considerable part of that logic is delegated to the middleware which maintains its states synchronized with the bare frontend.
+
+The frontend thus becomes a very thin client that manages raw input and output from the user. The middleware possibly offers an arbitrary set of controls that output the current context. Some minimal set of controls may include, but is not limited to messages, lists, tables and input forms. Responding back with an action, the user decides which one to send to the middleware, expecting a new context to appear in the frontend.
 
 ## Example
 
-The following example illustrates a typical Symbolfront session. The client contains no application-specific action vocabulary. Instead, during runtime, as the context changes, the application provides a set of actions available in that context.
+The following example illustrates a typical Symbolfront session. The frontend contains no application-specific action vocabulary. Instead, during runtime, as the context changes, the middleware provides a set of actions available in that context.
 
 When the example session starts, user interface shows:
 
@@ -19,7 +21,7 @@ When the example session starts, user interface shows:
 
 -- context ---------------------------------------------------------------------
     
-  Task List - The list is empty.
+  Task List - The list is empty
 
 -- actions ---------------------------------------------------------------------
 
@@ -37,9 +39,9 @@ We click `[ New task ]`. The UI responds:
 
   New task
 
-  |        Date: ▶ <YYYY-MM-DD> ◀ |
-  |        Time:   <HH:MM>        |
-  | Description:   <text>         |
+  |        Date: ▶<YYYY-MM-DD>◀ |
+  |        Time:  <HH:MM>       |
+  | Description:  <text>        |
 
 -- actions ---------------------------------------------------------------------
 
@@ -57,9 +59,9 @@ We type `2026-09-08` and press `enter`.
 
   New task
 
-  |        Date:   2026-09-08 |
-  |        Time: ▶ <HH:MM> ◀  |
-  | Description:   <text>     |
+  |        Date:  2026-09-08 |
+  |        Time: ▶<HH:MM>◀   |
+  | Description:  <text>     |
 
 -- actions ---------------------------------------------------------------------
 
@@ -77,9 +79,9 @@ We type `10:00` and press `enter`.
 
   New task
 
-  |        Date:   2026-09-08 |
-  |        Time:   10:00      |
-  | Description: ▶ <text> ◀   |
+  |        Date:  2026-09-08 |
+  |        Time:  10:00      |
+  | Description: ▶<text>◀    |
 
 -- actions ---------------------------------------------------------------------
 
@@ -97,9 +99,9 @@ We type `Go to dentist` and press `enter`. New task is added.
 
   Task List - This week
 
-  |   No.  Day, date, time           Description     |
-  |                                                  |
-  | ▶  1.  Tue, 2026-09-08, 10:00    Go to dentist ◀ |
+  |  No.  Day, date, time           Description    |
+  |                                                |
+  | ▶ 1.◀  Tue, 2026-09-08, 10:00    Go to dentist |
 
 -- actions ---------------------------------------------------------------------
 
@@ -110,35 +112,37 @@ We type `Go to dentist` and press `enter`. New task is added.
 
 We click `[ Done ]`. The session ends.
 
-## Relation to backend
+## Relation between frontend and middleware
 
-Symbolback is intended to serve as a backend service to Symbolfront. It is a symbolic virtual machine passing through various complex states, sending to Symbolfront only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to Symbolfront as `A = α(S)` where `S` is the current application state and `α` is a function returning the available action set.
+Middleware is a symbolic virtual machine passing through various complex states, sending to frontend only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to frontend as `A = α(S)` where `S` is the current application state and `α` is a function returning the available action set.
 
-State transitions are defined as `S' = σ(S, a)` where `S` is the current state, action `a` is an element of `A` action set, `σ` is a backend state transition function, and `S'` is the resulting state. That way, for proper functioning, client doesn't have to be aware of anything else but the current contextual display data and the current action set.
+State transitions are defined as `S' = σ(S, a)` where `S` is the current state, action `a` is an element of `A` action set, `σ` is a middleware state transition function, and `S'` is the resulting state. That way, for proper functioning, the frontend doesn't have to be aware of anything else but the current contextual display data and the current action set.
 
-The upwards message communication from Symbolback to Symbolfront comes down to the following definition: `(D', A') = Context(S')`, where `D'` is a current display data for state `S'`, and `A'` is a current action set for state `S'`. In other words, Symbolback is the one responsible for guiding a user through application communication workflow without the client needing to be aware of application particular semantics.
+The upwards message communication from middleware to frontend brings the following definition: `(C', A') = Interface(S')`, where `C'` is a current context for state `S'`, and `A'` is a current action set for state `S'`. In other words, middleware is the one responsible for guiding a user through application communication workflow without the frontend needing to be aware of application particular semantics.
 
 ```
 • • • • • • • • • • • • • • • • • • • • • • • •
-•                 Symbolfront                 •
+•                  frontend                   •
 • • • • • • • • • • • • • • • • • • • • • • • •
           ▲                         •
           •                         •
           •                         •
 • • • • • • • • • • •     • • • • • • • • • • •
-•   display data,   •     •       action      •
+•     context,      •     •       action      •
 •    action set     •     •                   •
 • • • • • • • • • • •     • • • • • • • • • • •
           •                         •
           •                         •
           •                         ▼
 • • • • • • • • • • • • • • • • • • • • • • • •
-•                 Symbolback                  •
+•                  middleware                 •
 • • • • • • • • • • • • • • • • • • • • • • • •
 ```
 
-The client doesn't need to understand the transition function `σ`. It only needs to: display `D`, expose `A`, select an action `a ∈ A`, and send the `a` back.
+The frontend doesn't need to understand the transition function `σ`. It only needs to: display `C`, expose `A`, select an action `a ∈ A`, and send the `a` back.
 
 ## Summary
 
-Symbolfront deliberately trades richer UI expressiveness for simplicity of appearance. The purpose of this project is to explore how far that trade-off can be taken. Richer UIs remain the better interface for many applications, but the question is how simple an interface can become while still supporting an interesting balance between simplicity, discoverability, and expressive power.
+Frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users, land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
+
+The separation of user actions from computing responses may hopefully bring some benefits that may include consistency and simplicity in designing and experiencing application user interface. Being an experimental excursion, this architecture still needs to prove itself in real use cases.
