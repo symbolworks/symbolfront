@@ -39,7 +39,7 @@ We click `[ New task ]`. The UI responds:
 
   New task
 
-  |        Date: <YYYY-MM-DD> |
+  |        Date: ▶<YYYY-MM-DD>◀ |
   |        Time:  <HH:MM>       |
   | Description:  <text>        |
 
@@ -60,7 +60,7 @@ We type `2026-09-08` and press `enter`.
   New task
 
   |        Date:  2026-09-08 |
-  |        Time: <HH:MM>   |
+  |        Time: ▶<HH:MM>◀   |
   | Description:  <text>     |
 
 -- actions ---------------------------------------------------------------------
@@ -81,7 +81,7 @@ We type `10:00` and press `enter`.
 
   |        Date:  2026-09-08 |
   |        Time:  10:00      |
-  | Description: <text>    |
+  | Description: ▶<text>◀    |
 
 -- actions ---------------------------------------------------------------------
 
@@ -99,9 +99,9 @@ We type `Go to dentist` and press `enter`. New task is added.
 
   Task List - This week
 
-  |  No.  Day, date, time           Description    |
-  |                                                |
-  | 1.  Tue, 2026-09-08, 10:00    Go to dentist |
+  |  No.  Day, date, time           Description   |
+  |                                               |
+  | ▶ 1.◀ Tue, 2026-09-08, 10:00    Go to dentist |
 
 -- actions ---------------------------------------------------------------------
 
