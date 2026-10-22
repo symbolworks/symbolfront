@@ -1,6 +1,6 @@
 # Symbolfront
 
-**A context-driven frontend that exposes only the context and actions originating from the middleware's current state.**
+**A context-driven frontend that exposes only the context and dependent actions originating from the middleware's current state.**
 
 ## The idea
 
