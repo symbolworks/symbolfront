@@ -120,6 +120,8 @@ State transitions are defined as `S' = σ(S, a)` where `S` is the current state,
 
 The upwards message communication from middleware to frontend brings the following definition: `(C', A') = Interface(S')`, where `C'` is a current context for state `S'`, and `A'` is a current action set for state `S'`. In other words, middleware is the one responsible for guiding a user through application communication workflow without the frontend needing to be aware of application particular semantics.
 
+It is important to emphasize is that context `C` is a textual box which contains characters to be rendered on screen. There is no document structure present in the frontend, only a raw text rectangle representing a screen to be displayed by frontend. All the interface logic belongs to the middleware. The other important thing is that an action `a` may represent a device event such is alphabetic or numeric keypress, mouse click at position `(x, y)`, mousemove to position `(x, y)`, or screen touch at position `(x, y)`. Such available events are indicated in the bottom ruler where the current possible input devices are listed.
+
 ```
 • • • • • • • • • • • • • • • • • • • • • • • •
 •                  frontend                   •
@@ -145,4 +147,6 @@ The frontend doesn't need to understand the transition function `σ`. It only ne
 
 Frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
 
-The separation of user actions from computing responses hopefully brings some benefits that may include consistency and simplicity in designing and experiencing application user interface. Being an experimental excursion, this architecture still needs to prove itself in real use cases.
+The separation of user actions from computing responses hopefully brings some benefits that may include consistency in designing and experiencing application user interface. Potential direction in which this could be interpreted is universality of the Symbolfront frontend. This proposition entails that the same minimal frontend could be paired with arbitrarily different middlewares communicating with the frontend. It doesn't necessarily mean that the overall application complexity will be reduced, yet a considerable part of it could be shifted to the Symbolfront middleware.
+
+Still, the strongest idea in Symbolfront isn't the separation of concerns between the frontend and middleware. It is what such separation brings along: an interplay between the next actions that particular contexts make available, and the next contexts that follow from taking those actions. While this symmetry may be worth exploring in more depth, it renders Symbolfront as an experimental excursion that still needs to be proved in the practice.
