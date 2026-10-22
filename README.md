@@ -112,7 +112,7 @@ We type `Go to dentist` and press `enter`. New task is added.
 
 We click `[ Done ]`. The session ends.
 
-## Relation between frontend and middleware
+## Formal relation between frontend and middleware
 
 Middleware is a symbolic virtual machine passing through various complex states, sending to frontend only necessary contextual information. Thus, along the contextual display data, currently available actions are passed to the frontend as `A = α(S)` where `S` is the current application state and `α` is a function returning the available action set.
 
@@ -145,4 +145,4 @@ The frontend doesn't need to understand the transition function `σ`. It only ne
 
 Frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
 
-The separation of user actions from computing responses may hopefully bring some benefits that may include consistency and simplicity in designing and experiencing application user interface. Being an experimental excursion, this architecture still needs to prove itself in real use cases.
+The separation of user actions from computing responses hopefully brings some benefits that may include consistency and simplicity in designing and experiencing application user interface. Being an experimental excursion, this architecture still needs to prove itself in real use cases.
