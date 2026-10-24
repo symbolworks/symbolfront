@@ -1,14 +1,14 @@
 # Symbolfront
 
-**A context-driven frontend that exposes only the context and dependent actions originating from the middleware's current state.**
+**A context-driven frontend that exposes only the context and available actions originating from the middleware's current state.**
 
 ## The idea
 
-This project explores whether a frontend can be separated from middleware, exposing in frontend only the current context and available action set that may operate on that context. The middleware becomes responsible for maintaining application states which respond to sent actions, and which generate a new context.
+This project explores whether a frontend can be separated from a middleware, exposing in frontend only the current context and available action set that may operate on that context. The middleware becomes responsible for maintaining application states which respond to sent actions, and which generate a new context.
 
 From the user side, the frontend still serves to output context data and input contextually dependent actions, but its role is more limited than in classical frontends that embrace the entire user interfacing logic. In Symbolfront, a considerable part of that logic is delegated to the middleware which maintains its states synchronized with the bare frontend.
 
-The frontend thus becomes a very thin client that manages raw input and output from the user. The middleware possibly offers an arbitrary set of controls that output the current context. Some minimal set of controls may include, but is not limited to messages, lists, tables and input forms. Responding back with an action, the user decides which one to send to the middleware, expecting a new context to appear in the frontend.
+The frontend thus becomes a very thin client that manages raw input from and output to the user. The middleware possibly offers an arbitrary set of controls that output the current context. Some minimal set of controls may include, but is not limited to messages, lists, tables and input forms. Responding back with an action, the user decides which one to send to the middleware, expecting a new context to appear in the frontend.
 
 ## Example
 
@@ -120,7 +120,7 @@ State transitions are defined as `S' = σ(S, a)` where `S` is the current state,
 
 The upwards message communication from middleware to frontend brings the following definition: `(C', A') = Interface(S')`, where `C'` is a current context for state `S'`, and `A'` is a current action set for state `S'`. In other words, middleware is the one responsible for guiding a user through application communication workflow without the frontend needing to be aware of application particular semantics.
 
-It is important to emphasize that context `C` is a textual box which contains characters to be rendered on screen. There is no document structure present in the frontend, only a raw text rectangle representing a screen to be displayed by frontend. All the interface logic belongs to the middleware. The other important thing is that an action `a` may represent a device event such is alphabetic or numeric keypress, mouse click at position `(x, y)`, mousemove to position `(x, y)`, or screen touch at position `(x, y)`. Such available events are indicated in the bottom ruler where the current possible input devices are listed.
+To corroborate the explanation with a diagram, the communication between the frontend and the middleware can be depicted by the following figure:
 
 ```
 • • • • • • • • • • • • • • • • • • • • • • • •
@@ -143,10 +143,16 @@ It is important to emphasize that context `C` is a textual box which contains ch
 
 The frontend doesn't need to understand the transition function `σ`. It only needs to: display `C`, expose `A`, select an action `a ∈ A`, and send the `a` back.
 
+It is important to emphasize that context `C` is a textual box which contains characters to be rendered on screen. There is no document structure present in the frontend, only a raw text rectangle representing a screen to be displayed by frontend. All the interface logic belongs to the middleware.
+
+The other important thing is that an action `a` may represent a device event such is alphabetic or numeric keypress, mouse click at position `(button, x, y)`, mousemove to position `(x, y)`, or screen touch at position `(x, y)`. Such available events are indicated in the bottom ruler where the current possible input devices are listed.
+
+In cases where an action is a device event, and where the action brings some parameters like `(x, y)` with mousemove, the event is converted into a grouped series of actions. In example of mousemove, an action simply tagged `mousemove` is sent. Next, the parameter `x` action is sent, and finally the parameter `y` action concludes the sent series. The middleware has to detect when there are no more parameters to receive, and proceed accordingly to its intention.
+
 ## Summary
 
-Frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
+Classical programming frontends commonly manage the entire user interfacing logic. Symbolfront separates that role into (1) bare input/output user frontend and (2) computational middleware that communicates with the minimal frontend. As a consequence, user interface offers a particular kind of interaction with the user, basing its essence in two clearly differentiated notions: action and response. Using the frontend, contextually dependent actions sent by users land at the middleware which responds back to the frontend, sending a new context and assigned set of newly available actions.
 
-The separation of user actions from computing responses hopefully brings some benefits that may include consistency in designing and experiencing application user interface. Potential direction in which this could be interpreted is universality of the Symbolfront frontend. This proposition entails that the same minimal frontend could be paired with arbitrarily different middlewares communicating with the frontend. It doesn't necessarily mean that the overall application complexity will be reduced, yet a considerable part of it could be shifted to the Symbolfront middleware.
+The separation of user actions from computing responses hopefully brings some benefits that may include consistency in designing and experiencing application user interface. Potential direction in which this could be interpreted is universality of the Symbolfront frontend. This proposition entails that the same minimal frontend could be paired with arbitrarily different middlewares. It doesn't necessarily mean that the overall application complexity will be reduced, yet a considerable part of it could be shifted to the Symbolfront middleware.
 
 Still, the strongest idea in Symbolfront isn't the separation of concerns between the frontend and middleware. It is what such separation brings along: an interplay between the next actions that particular contexts make available, and the next contexts that follow from taking those actions. While this symmetry may be worth exploring in more depth, it renders Symbolfront as an experimental excursion that still needs to be proved in the practice.
