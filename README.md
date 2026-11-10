@@ -110,7 +110,7 @@ We type `Go to dentist` and press `enter`. New task is added.
 -- cursor -- mouse -- touch ----------------------------------------------------
 ```
 
-We click `[ Done ]`. The session ends.
+We click `[ Done ]` and the session ends.
 
 ## Formal relation between frontend and middleware
 
